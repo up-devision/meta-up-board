@@ -90,7 +90,7 @@ DISTRO ?= "poky"
 #  - 'package_rpm' for rpm style packages
 # E.g.: PACKAGE_CLASSES ?= "package_rpm package_deb package_ipk"
 # We default to rpm:
-PACKAGE_CLASSES ?= "package_rpm"
+PACKAGE_CLASSES ?= "package_rpm package_deb"
 
 #
 # SDK target architecture
@@ -223,17 +223,18 @@ PACKAGECONFIG:append_pn-nativesdk-qemu = " sdl"
 CONF_VERSION = "2"
 
 # Include SystemD and SystemCTL
-DISTRO_FEATURES:append = " systemd"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+#DISTRO_FEATURES:append = " systemd"
+DISTRO_FEATURES:append = " wayland"
+#VIRTUAL-RUNTIME_init_manager = "systemd"
+#VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+#DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
 
 # Added "virtualization" layer to support for building Xen, KVM, Libvirt, and associated
 # packages necessary for constructing OE-based virtualized solutions.
-DISTRO_FEATURES:append = " virtualization"
+#DISTRO_FEATURES:append = " virtualization"
 
 # Added Docker container to the image
-IMAGE_INSTALL:append = " docker python3-docker-compose"
+#IMAGE_INSTALL:append = " docker python3-docker-compose"
 
 PREFERRED_PROVIDER_iasl-native = "acpica-native"
 
