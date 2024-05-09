@@ -1,7 +1,7 @@
 Yocto BSP meta layer
 ======================================
-**Note: This branch kirkstone for Yocto 'kirkstone' is for development purposes
-only. Please refer to 'kirkstone' branch in this repository for non-experimental
+**Note: This branch Scarthgap for Yocto 'scarthgap' is for development purposes
+only. Please refer to 'scarthgap' branch in this repository for non-experimental
 purposes.**
 
 This README file contains information on building the meta-up-board BSP
@@ -25,7 +25,7 @@ Table of Contents
 Prerequisites
 ================
 
-Supported hardware versions for Yocto 4.0 (kirkstone)
+Supported hardware versions for Yocto 5.0 (Scarthgap)
 ------------------------------------------------
 * UP Squared
 * UP Squared Pro
@@ -35,6 +35,7 @@ Supported hardware versions for Yocto 4.0 (kirkstone)
 * UP Xtreme
 * UP Xtreme i11
 * UP Xtreme i12
+* UP Xtreme i14
 * UP Squared 6000
 * UP 4000
 * UP 7000
@@ -42,37 +43,38 @@ Supported hardware versions for Yocto 4.0 (kirkstone)
 * UP Squared Pro 7000
 * UP Squared i12
 
+
 Downloading the meta-up-board BSP layer
 ========================================
 
-Download the Kirkstone release and enter the poky directory:
+Download the Scarthgap release and enter the poky directory:
 ```
-git clone -b kirkstone git://git.yoctoproject.org/poky.git
+git clone -b scarthgap git://git.yoctoproject.org/poky.git
 cd poky
 ```
-Download the Intel BSP layer version for Kirkstone:
+Download the Intel BSP layer version for Scarthgap:
 
 ```
-git clone -b kirkstone git://git.yoctoproject.org/meta-intel.git
+git clone -b scarthgap git://git.yoctoproject.org/meta-intel.git
 ```
 
-Download the latest collection of layers for OE-core universe for Kirkstone:
+Download the latest collection of layers for OE-core universe for Scarthgap:
 ```
-git clone -b kirkstone git://git.openembedded.org/meta-openembedded
+git clone -b scarthgap git://git.openembedded.org/meta-openembedded
 ```
-Download meta-virtualization and openembedded-core for Docker containers:
+Download meta-virtualization and openembedded-core for Docker containers (optional):
 ```
-git clone -b kirkstone git://git.yoctoproject.org/meta-virtualization
-```
-
-```
-git clone -b kirkstone git://git.openembedded.org/openembedded-core
+git clone -b scarthgap git://git.yoctoproject.org/meta-virtualization
 ```
 
-Download this UP Board BSP layer for Kirkstone:
+```
+git clone -b scarthgap git://git.openembedded.org/openembedded-core
+```
+
+Download this UP Board BSP layer for Scarthgap:
 
 ```
-git clone -b kirkstone https://github.com/up-division/meta-up-board.git
+git clone -b scarthgap https://github.com/up-division/meta-up-board.git
 ```
 
 Building your Yocto image for each UP machine
