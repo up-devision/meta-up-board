@@ -25,6 +25,7 @@ IMAGE_INSTALL:append = " rt-tests hwlatdetect"
 IMAGE_INSTALL:append = " spitools"
 IMAGE_INSTALL:append = " packagegroup-core-buildessential"
 IMAGE_INSTALL:append = " amixeron"
+IMAGE_INSTALL:append = " lmsensors"
 
 LICENSE_FLAGS_ACCEPTED = "commercial"
 
