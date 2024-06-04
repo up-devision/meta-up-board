@@ -39,6 +39,7 @@ Supported hardware versions for Yocto 5.0 (Scarthgap)
 * UP Squared 6000
 * UP 4000
 * UP 7000
+* UP 7100
 * UP Element i12
 * UP Squared Pro 7000
 * UP Squared i12
@@ -84,7 +85,7 @@ UP Squared Board:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-squared bitbake upboard-image-sato
 ```
 
@@ -93,7 +94,7 @@ UP Core Board:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-core bitbake upboard-image-sato
 ```
 
@@ -102,7 +103,7 @@ UP Core  Plus Board:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-core-plus bitbake upboard-image-sato
 ```
 
@@ -111,7 +112,7 @@ UP Xtreme:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-xtreme bitbake upboard-image-sato
 ```
 
@@ -120,7 +121,7 @@ UP Xtreme i11:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-xtreme-i11 bitbake upboard-image-sato
 ```
 
@@ -129,7 +130,7 @@ UP 4000 Board:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-4000 bitbake upboard-image-sato
 ```
 
@@ -144,7 +145,7 @@ UP Squared 6000 Board:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-squared-6000 bitbake upboard-image-sato
 ```
 
@@ -159,7 +160,7 @@ UP Xtreme i12:
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 MACHINE=up-xtreme-i12 bitbake upboard-image-sato
 ```
 
@@ -167,6 +168,24 @@ Building RT image
 
 ```
 MACHINE=up-xtreme-i12-rt bitbake upboard-image-sato
+```
+At the end of a successfull build, you should have a live image that
+you can boot from a USB flash drive (see instructions on how to do
+that below, in the section 'Booting the live USB image').
+
+UP Xtreme i14:
+-----------------
+From the poky directory:
+
+```
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
+MACHINE=up-xtreme-i14 bitbake upboard-image-sato
+```
+
+Building RT image
+
+```
+MACHINE=up-xtreme-i14-rt bitbake upboard-image-sato
 ```
 At the end of a successfull build, you should have a live image that
 you can boot from a USB flash drive (see instructions on how to do
@@ -253,7 +272,7 @@ Enabling Secure Boot
 From the poky directory:
 
 ```
-TEMPLATECONF=meta-up-board/conf source oe-init-build-env
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
 ```
 
 Edit build/conf/local.conf file to enable Secure Boot
