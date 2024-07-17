@@ -5,7 +5,6 @@ PR := "${PR}.1"
 SRC_URI += " \
        file://up-board.cfg \
        file://up-board-user-config.cfg \
-       file://up-board-pinctrl.cfg \
        file://audio.cfg \
        file://ethernet.cfg \
        file://intel-dev.cfg \
@@ -13,6 +12,7 @@ SRC_URI += " \
        file://usb.cfg \
        file://ipu.cfg \
        file://wireless.cfg \
+       file://up-board-pinctrl.cfg \
 "
 
 # replace these SRCREVs with the real commit ids once you've had
