@@ -22,7 +22,7 @@ MACHINE_EXTRA_RDEPENDS += "kernel-module-upboard-ec"
 MACHINE_EXTRA_RDEPENDS += "kernel-module-leds-upboard"
 MACHINE_EXTRA_RDEPENDS += "kernel-module-pinctrl-upboard"
 MACHINE_EXTRA_RDEPENDS += "kernel-module-pinctrl-upelement"
-MACHINE_EXTRA_RDEPENDS += "kernel-module-spi-pxa2xx-platform"
+MACHINE_EXTRA_RDEPENDS += "kernel-module-spi-pxa2xx-up"
 
 
 WKS_FILE = "${@bb.utils.contains_any("EFI_PROVIDER", "systemd-boot rmc-boot", "systemd-bootdisk-initrd.wks", "grub-bootdisk-initrd.wks", d)}"
