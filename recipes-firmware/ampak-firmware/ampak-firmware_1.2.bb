@@ -3,7 +3,8 @@ LICENSE = "CLOSED"
 PR = "r0"
 PN = "ampak-firmware"
 PV = "0.1"
-S = "${WORKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 PACKAGE_ARCH = "all"
 

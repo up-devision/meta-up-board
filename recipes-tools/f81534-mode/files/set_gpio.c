@@ -4,8 +4,12 @@
 #include <string.h>
 #include <unistd.h>
 #include <dirent.h> 
+#include <linux/ioctl.h>
+#include <linux/types.h>
+#include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+
 
 #define VERSION "$Revision: 1844 $"
 

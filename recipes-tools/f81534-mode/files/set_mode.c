@@ -1,10 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h>
+#include <string.h>
+#include <unistd.h>
 #include <linux/ioctl.h>
 #include <linux/serial.h>
-#include <string.h>
-#include <asm-generic/ioctls.h>
+#include <sys/ioctl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #define VERSION "$Revision: 1440 $"
 #define F81534_MODE_SYSFS	"/dev/%s"
