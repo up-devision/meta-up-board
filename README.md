@@ -1,7 +1,7 @@
 Yocto BSP meta layer
 ======================================
-**Note: This branch Scarthgap for Yocto 'scarthgap' is for development purposes
-only. Please refer to 'scarthgap' branch in this repository for non-experimental
+**Note: This branch Styhead for Yocto 'styhead' is for development purposes
+only. Please refer to 'styhead' branch in this repository for non-experimental
 purposes.**
 
 This README file contains information on building the meta-up-board BSP
@@ -25,7 +25,7 @@ Table of Contents
 Prerequisites
 ================
 
-Supported hardware versions for Yocto 5.0 (Scarthgap)
+Supported hardware versions for Yocto 5.1 (styhead)
 ------------------------------------------------
 * UP Squared
 * UP Squared Pro
@@ -36,6 +36,7 @@ Supported hardware versions for Yocto 5.0 (Scarthgap)
 * UP Xtreme i11
 * UP Xtreme i12
 * UP Xtreme i14
+* UP Xtreme ARL
 * UP Squared 6000
 * UP 4000
 * UP 7000
@@ -48,34 +49,34 @@ Supported hardware versions for Yocto 5.0 (Scarthgap)
 Downloading the meta-up-board BSP layer
 ========================================
 
-Download the Scarthgap release and enter the poky directory:
+Download the styhead release and enter the poky directory:
 ```
-git clone -b scarthgap git://git.yoctoproject.org/poky.git
+git clone -b styhead git://git.yoctoproject.org/poky.git
 cd poky
 ```
-Download the Intel BSP layer version for Scarthgap:
+Download the Intel BSP layer version for Styhead:
 
 ```
-git clone -b scarthgap git://git.yoctoproject.org/meta-intel.git
+git clone -b styhead git://git.yoctoproject.org/meta-intel.git
 ```
 
-Download the latest collection of layers for OE-core universe for Scarthgap:
+Download the latest collection of layers for OE-core universe for Styhead:
 ```
-git clone -b scarthgap git://git.openembedded.org/meta-openembedded
+git clone -b styhead git://git.openembedded.org/meta-openembedded
 ```
 Download meta-virtualization and openembedded-core for Docker containers (optional):
 ```
-git clone -b scarthgap git://git.yoctoproject.org/meta-virtualization
+git clone -b styhead git://git.yoctoproject.org/meta-virtualization
 ```
 
 ```
-git clone -b scarthgap git://git.openembedded.org/openembedded-core
+git clone -b styhead git://git.openembedded.org/openembedded-core
 ```
 
-Download this UP Board BSP layer for Scarthgap:
+Download this UP Board BSP layer for Styhead:
 
 ```
-git clone -b scarthgap https://github.com/up-division/meta-up-board.git
+git clone -b styhead https://github.com/up-division/meta-up-board.git
 ```
 
 Building your Yocto image for each UP machine
@@ -186,6 +187,21 @@ Building RT image
 
 ```
 MACHINE=up-xtreme-i14-rt bitbake upboard-image-sato
+```
+
+UP Xtreme ARL:
+-----------------
+From the poky directory:
+
+```
+TEMPLATECONF=meta-up-board/conf/templates/default source oe-init-build-env
+MACHINE=up-xtreme-arl bitbake upboard-image-sato
+```
+
+Building RT image
+
+```
+MACHINE=up-xtreme-arl-rt bitbake upboard-image-sato
 ```
 At the end of a successfull build, you should have a live image that
 you can boot from a USB flash drive (see instructions on how to do
