@@ -8,10 +8,9 @@ S = "${WORKDIR}/sources"
 UNPACKDIR = "${S}"
 do_install() {
 	install -m 0755 -d ${D}${base_sbindir}
-	install -m 0755 ${WORKDIR}/${BPN}.sh ${D}/${base_sbindir}/${BPN}
+	install -m 0755 ${UNPACKDIR}/${BPN}.sh ${D}/${base_sbindir}/${BPN}
 }
 
 inherit allarch
 
 FILES_${PN} += "${base_sbindir}"
-

@@ -16,12 +16,7 @@ RDEPENDS:${PN} += "bash"
 
 do_install() {
 	install -d ${D}${sysconfdir}/systemd/system
-	install -m 0755 ${WORKDIR}/amixeron.service ${D}${sysconfdir}/systemd/system
+	install -m 0755 ${UNPACKDIR}/amixeron.service ${D}${sysconfdir}/systemd/system
         install -d ${D}${sbindir}/
-	install -m 0755 ${WORKDIR}/amixeron.sh ${D}${sbindir}/
+	install -m 0755 ${UNPACKDIR}/amixeron.sh ${D}${sbindir}/
 }
-
-
-
-
-
