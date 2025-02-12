@@ -25,7 +25,7 @@ Table of Contents
 Prerequisites
 ================
 
-Supported hardware versions for Yocto 5.1 (styhead)
+Supported hardware versions for Yocto 5.1.1 (styhead)
 ------------------------------------------------
 * UP Squared
 * UP Squared Pro
