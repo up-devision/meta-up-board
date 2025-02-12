@@ -43,6 +43,7 @@ Supported hardware versions for Yocto 5.1 (styhead)
 * UP 7100
 * UP Element i12
 * UP Squared Pro 7000
+* UP Squared Pro TWL
 * UP Squared i12
 
 
